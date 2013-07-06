@@ -1,0 +1,7 @@
+{
+    "name" : "cljs-brainfuck",
+    "version" : "0.0.1",
+    "dependencies" : {
+        "sync-prompt" : "0.0.0"
+    }
+}
