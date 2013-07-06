@@ -3,10 +3,10 @@
             [clojure.string :as str]))
 
 (defn read-input [cell cells]
-  (let [sync-prompt (nodejs/require "sync-prompt")]
-    (let [p (.prompt sync-prompt)]
+  (let [sync-prompt (nodejs/require "sync-prompt")
+        p (.prompt sync-prompt)]
       (reset! cells (assoc @cells @cell
-                           (.charCodeAt (.trim (.toString p)) 0))))))
+                           (.charCodeAt (.trim (.toString p)) 0)))))
 
 (defn bf-loop [direction pointer commands]
   (let [val (if (= direction :forward) 1 -1)]
