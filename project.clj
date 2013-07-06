@@ -3,6 +3,9 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+
+  :plugins [[lein-cljsbuild "0.3.2"]]
+
   :cljsbuild {
               :builds [{
                         :source-paths ["src"]
@@ -10,5 +13,5 @@
                                    :output-to "target/brainfuck.js"
                                    :target :nodejs
                                    :optimizations :simple
-                                   :pretty-print true}}]}
+                                   :pretty-print false}}]}
   :dependencies [[org.clojure/clojure "1.5.1"]])
