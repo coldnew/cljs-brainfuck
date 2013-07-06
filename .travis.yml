@@ -3,10 +3,5 @@ language:
 lein: lein2
 jdk:
   - oraclejdk7
-before_script:
-  - "export DISPLAY=:99:0"
-  - "echo 'Compile to javascript'"
-  - "lein2 cljsbuild once"
-  - "echo 'Done.'"
 script:
-  - lein2 test
+  - lein2 cljsbuild once test
