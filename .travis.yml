@@ -4,4 +4,4 @@ lein: lein2
 jdk:
   - oraclejdk7
 script:
-  - lein2 cljsbuild once test
+  - lein2 cljsbuild once

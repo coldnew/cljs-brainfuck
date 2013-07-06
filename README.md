@@ -1,5 +1,4 @@
-# cljs-brainfuck (https://travis-ci.org/coldnew/cljs-brainfuck.png?branch=master)](https://travis-ci.org/coldnew/cljs-brainfuck)
-
+# cljs-brainfuck [![Travis CI status](https://secure.travis-ci.org/coldnew/cljs-brainfuck.png)](http://travis-ci.org/#!/coldnew/cljs-brainfuck/builds)
 A Brainfuck interpreter written in ClojureScript on node.js.
 
 ## Usage
