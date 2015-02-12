@@ -24,7 +24,7 @@
     \< (swap! cell dec)
     \+ (reset! cells (assoc @cells @cell (inc (get @cells @cell))))
     \- (reset! cells (assoc @cells @cell (dec (get @cells @cell))))
-    \. (print (char (get @cells @cell)))
+    \. (.write js/process.stdout (char (get @cells @cell)))
     \, (read-input cell cells)
     \[ (if     (= (get @cells @cell) 0) (bf-loop :forward  pointer commands))
     \] (if-not (= (get @cells @cell) 0) (bf-loop :backward pointer commands))
@@ -43,8 +43,8 @@
         fs (nodejs/require "fs")]
     (if arg1
       (.readFile fs arg1 "utf8" (fn [err data]
-                                  (if err (println err)
+                                  (if err (.log js/console err)
                                       (interpret (str/trim-newline data)))))
-      (println "Error: Please specify filename."))))
+      (.log js/console "Error: Please specify filename."))))
 
 (set! *main-cli-fn* -main)
