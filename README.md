@@ -15,8 +15,12 @@ A Brainfuck interpreter written in ClojureScript on node.js.
 
         node target/brainfuck.js examples/hello_world.bf
 
+## Screenshots
+
+![Screenshot](https://github.com/coldnew/cljs-brainfuck/blob/master/screenshot/screenshot1.png?raw=true)
+
 ## License
 
-Copyright © 2013 coldnew
+Copyright © 2013-2015 coldnew
 
 Distributed under the Eclipse Public License, the same as Clojure.
