@@ -14,4 +14,5 @@
                                    :target :nodejs
                                    :optimizations :simple
                                    :pretty-print false}}]}
-  :dependencies [[org.clojure/clojure "1.6.0"]])
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [org.clojure/clojurescript "0.0-2913"]])
