@@ -52,6 +52,6 @@
 ;; println and print function
 ;; see:
 ;; http://stackoverflow.com/questions/19963948/how-to-set-the-clojurescript-print-fn-fn-in-nodejs
-;; (enable-console-print!)
+(enable-console-print!)
 
 (set! *main-cli-fn* -main)
