@@ -24,7 +24,9 @@
     \< (swap! cell dec)
     \+ (reset! cells (assoc @cells @cell (inc (get @cells @cell))))
     \- (reset! cells (assoc @cells @cell (dec (get @cells @cell))))
-    \. (print (char (get @cells @cell)))
+    ;; BUG: In cljs v.2850, the print function seems will add newline char ?
+    ;;    \. (print (char (get @cells @cell)))
+    \. (.write js/process.stdout (char (get @cells @cell)))
     \, (read-input cell cells)
     \[ (if     (= (get @cells @cell) 0) (bf-loop :forward  pointer commands))
     \] (if-not (= (get @cells @cell) 0) (bf-loop :backward pointer commands))
