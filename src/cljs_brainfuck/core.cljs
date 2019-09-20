@@ -3,8 +3,8 @@
             [clojure.string :as str]))
 
 (defn read-input [cell cells]
-  (let [sync-prompt (nodejs/require "sync-prompt")
-        p (.prompt sync-prompt)]
+  (let [prompt-sync (nodejs/require "prompt-sync")
+        p (.prompt prompt-sync)]
     (reset! cells (assoc @cells @cell
                          (.charCodeAt (.trim (.toString p)) 0)))))
 
