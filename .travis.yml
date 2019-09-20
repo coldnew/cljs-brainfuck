@@ -1,7 +1,12 @@
+# https://github.com/travis-ci/docs-travis-ci-com/blob/master/user/languages/clojure.md
+
 language:
   - clojure
-lein: lein2
+
+lein: lein
+
 jdk:
-  - oraclejdk8
+  - oraclejdk11
+
 script:
-  - lein2 cljsbuild once
+  - lein cljsbuild once
