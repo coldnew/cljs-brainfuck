@@ -2,6 +2,6 @@
     "name": "cljs-brainfuck",
     "version": "0.0.1",
     "dependencies": {
-        "prompt-sync": "^4.1.7"
+        "syncprompt": "^2.0.0"
     }
 }
